@@ -1,0 +1,344 @@
+/*
+ Theme Name:   Puchero Nexus Child
+ Theme URI:    https://github.com/shizus/puchero
+ Description:  Custom Nexus Child Theme for Puchero website	
+ Author:       Gabriel La Torre
+ Author URI:   http://latorregabriel.com
+ Template:     Nexus
+ Version:      1.0.0
+ License:      Creative Commons CC0 1.0 Universal
+ License URI:  http://creativecommons.org/publicdomain/zero/1.0/
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  nexus-puchero-child
+*/
+
+/* Generic Rules*/
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.15em;
+}
+
+
+/* Home rules */
+
+.excerpt-wrap a {
+    color: #FFFFFF;
+}
+
+#main-content::before,
+#main-content::after,
+.home #main-content::after {
+    background: none;
+    border-left: 0px solid #e0e0e0;
+    right: 0;
+    width: auto;
+}
+
+h1.module-title::before, h4.widgettitle::before, #breadcrumbs::before,
+h1.module-title, h4.widgettitle, #breadcrumbs {
+        background-image: none;
+}
+
+.home #content {
+    float: left;
+    width: 75%;
+}
+
+#sidebar, #additional-sidebar {
+    float: left;
+    width: 25%;
+	position: relative;
+}
+
+body.single #left-area, body.page #left-area {
+    border: 1px solid #e0e0e0;
+}
+
+#sidebar::before, #additional-sidebar::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+
+.recent-post p.post-meta {
+    color: #545454;
+}
+.post-meta > span {
+    color: #ffffff;
+    font-weight: 600;
+}
+.post-meta > a {
+    font-weight: 400;
+}
+.post-meta > a:hover {
+    font-weight: 600;
+}
+
+/*INSTAGRAM*/
+
+.pllexislider .pllex-direction-nav .pllex-next:before,
+.pllexislider .pllex-direction-nav .pllex-prev:before {
+	color: #a9d300 !important;
+}
+.widget.jr-insta-slider li:before {
+	content:none;
+}
+.widget.jr-insta-slider li {
+	padding: 0;
+}
+
+/*WEATHER*/
+
+#top-header-widget{
+	float: right;
+}
+#top-header-widget .widget{
+	padding: 0;
+}
+#top-header-widget h2.widgettitle {
+  display: none;
+}
+#wpc-weather .today .day {
+  height: 24px;
+  overflow: hidden;
+}
+
+div.today {
+  display: none !important;
+}
+
+
+
+/* Posts */
+
+.single-post div.panel-grid div.so-panel {
+  padding: 5px 0px;
+}
+
+.panel-grid {
+	margin-bottom: 5px;
+}
+
+div#content div.panel-grid {
+  margin-bottom: 5px;
+}
+
+.single-post div#content,
+.single-cartoon div#content{
+  width: 100%;
+}
+
+div.widget_sow-image {
+  margin-bottom: 0px !important;
+}
+
+/* Posts - author */
+
+.comment_avatar img, .author-avatar img {
+	border-radius: 10px;
+	margin-right: 10px;
+}
+/*
+#main-footer, #footer-bottom, #et-bio-author, #et-post-share {
+	background-color: #B1CC45;
+}*/
+
+#main-footer, #et-bio-author {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 1px solid #0f0f0f;
+}
+
+.comment_avatar::before, .author-avatar::before {
+	box-shadow: none;
+}
+
+div#et-box-author p {
+  font-weight: 500;
+}
+
+#author-info strong {
+  color: black;
+  font-weight: 600;
+}
+
+#et-post-share span {
+  font-weight: 500;
+}
+
+.whatsapp-share a {
+    background-image: url(http://www.pucheronews.com/wp-content/themes/puchero-nexus-child/images/icon_whatsapp.png);
+}
+
+#et-share-icons li.whatsapp-share {
+    display: none;
+}
+
+@media only screen and (max-width:70em) {
+    #et-share-icons li.whatsapp-share {
+        display: inline-block;
+    }
+}
+
+.author-avatar {
+  left: 30px;
+}
+
+@media only screen and (max-width:90em) {
+	div.author-avatar img {
+	  width: 7em;
+	  height: auto;
+	}
+}
+
+@media only screen and (max-width:80.0625em) { 
+	div.author-avatar img {
+	  width:5.5em;
+	  height: auto;
+	}
+}
+
+
+/* Posts - comments */
+
+#disqus_thread {
+    margin: 0 25px;
+}
+
+.fb-like.fb_iframe_widget {
+    margin: 25px;
+}
+
+#mc_embed_signup .button {
+    background-color: #a9d300;
+}
+/* Footer */
+
+#footer-info #copyright {
+  text-align: left;
+  color: #333;
+  margin-bottom: 30px;
+  float: left;
+  width: 50%;
+}
+
+#footer-info div#license {
+    width: 50%;
+    float: right;
+}
+
+
+#footer-info div#licence-img {
+    text-align: right;
+}
+
+#footer-info div#licence-text {
+    text-align: right;
+}
+
+/* Suscribe sticky */
+.back-to-top {
+    background: none repeat scroll 0 0 #ff9000;
+    bottom: 0;
+    color: #ffffff;
+    display: none;
+    height: 130px;
+    margin: 0;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+    width: 300px;
+    z-index: 100;
+}
+
+#mc_embed_signup_scroll > label {
+    color: black;
+}
+
+
+#mc_embed_signup form {
+    border: medium solid #000000;
+    display: block;
+    padding: 10px 0 10px 3%;
+    position: relative;
+    text-align: left;
+}
+
+#mc_embed_signup input.email {
+    width: 85%;
+}
+
+#mc_embed_signup .button {
+    background-color: #a9d300 !important;
+}
+
+/* Sidebar */
+
+.so-panel.widget.widget_sow-image.panel-first-child.panel-last-child {
+    margin-top: 20px;
+    padding: 0;
+}
+.widget.widget_siteorigin-panels-builder {
+    padding: 10px;
+}
+
+/* Pages */
+
+/* Specific Pages */
+
+
+.page-id-299 article h1:first-child,
+.page-id-358  article h1:first-child{
+    display: none;
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 961px) {
+	#additional-sidebar .widget {
+	    float: left;
+	    width: 20%;
+	    margin: 0 2%;
+	}
+
+	.home div#additional-sidebar {
+	    width: 100%;
+	    display: block !important;
+	}
+	.home #content {
+	  width: 100%;
+	}
+}
+@media only screen and (max-width: 1300px) and (min-width: 1279px){
+	.home #additional-sidebar {
+	  display: block; 
+	}
+}
+
+
+.cartoon-thumbnails-widget {
+    float: left;
+    margin: 0.5em;
+}
+
+.cartoon-thumbnails-widget .cartoon-container {
+    height: 160px;
+    overflow: hidden;
+    width: 160px;
+}
+
+/* Social buttons in Author box */
+
+a.et-share-button.et-share-google {
+    background: rgba(0, 0, 0, 0) url("http://www.pucheronews.com/wp-content/uploads/2015/08/google_plus.png") no-repeat scroll 0 0;
+}
+a.et-share-button.et-share-facebook {
+    background-image: url("http://www.pucheronews.com/wp-content/uploads/2015/08/fb-rounded-logo.png");
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+}
+a.et-share-button.et-share-twitter {
+    background: rgba(0, 0, 0, 0) url("http://www.pucheronews.com/wp-content/uploads/2015/08/round-twitter-logo.png") no-repeat scroll 0 0;
+}
