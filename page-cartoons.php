@@ -35,7 +35,7 @@ if ( '' != get_the_post_thumbnail() ) :
 					<?php
 						the_content();
 
-                    $queryObject = new WP_Query( 'post_type=cartoon&posts_per_page=15&order=asc' );
+                    $queryObject = new WP_Query( 'post_type=cartoon&posts_per_page=50&order=desc' );
                     // The Loop!
                     if ($queryObject->have_posts()) {
                         ?>
