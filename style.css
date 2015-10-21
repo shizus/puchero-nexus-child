@@ -347,11 +347,16 @@ a.et-share-button.et-share-twitter {
 
 #tomate-post-share {
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
     left: 0;
     background-color: #FFFFFF;
     padding: 5px;
     color: #000000;
     z-index: 10;
+}
+
+#tomate-post-share span {
+    margin: 5px;
+    display: inline-block;
 }
