@@ -18,6 +18,11 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-size: 1.15em;
 }
+/* Header */
+
+#logo {
+    padding-top: 0px;
+}
 
 
 /* Home rules */
@@ -94,6 +99,7 @@ body.single #left-area, body.page #left-area {
 
 #top-header-widget{
 	float: right;
+	margin: -3em 0 0 0;
 }
 #top-header-widget .widget{
 	padding: 0;
@@ -110,7 +116,11 @@ div.today {
   display: none !important;
 }
 
-
+#top-info .subtitle {
+    float: left;
+    clear: left;
+    margin: 0 0 1em 0;
+}
 
 /* Posts */
 

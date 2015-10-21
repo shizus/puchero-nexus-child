@@ -80,6 +80,7 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" />
 				</a>
+				<div class="subtitle">Periodismo y otros condimentos</div>
                 <?php if ( is_active_sidebar( 'top_sidebar' ) ) : ?>					<div id="top-header-widget">						<?php dynamic_sidebar( 'top_sidebar' ); ?>
                 </div> <!-- end #sidebar -->
                 <?php endif; ?>
