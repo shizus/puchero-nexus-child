@@ -13,13 +13,6 @@ if ( '' != get_the_post_thumbnail() ) :
 	</div> <!-- .post-thumbnail -->
 <?php endif; ?>
 
-<?php 
-
-echo "<!--\n\n";
-	echo "// Page Builder Data dump\n\n";
-	var_export( get_post_meta(get_the_ID(), 'panels_data', true));
-echo "\n\n-->"; ?>
-
 <div class="page-wrap container">
 	<div id="main-content">
 		<div class="main-content-wrap clearfix">
@@ -119,6 +112,39 @@ echo "\n\n-->"; ?>
                                 </li>
 							</ul>
 						</div>
+
+			<div id="tomate-post-share" class="clearfix">
+                            <span>¿Te gustó? ¡Compartilo!<?php //esc_html_e( 'Share This Post On', 'Nexus' ); ?></span>
+                            <ul id="et-share-icons">
+                                <?php
+                                $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'thumbnail' );
+                                $title_attribute = the_title_attribute( 'echo=0' );
+                                $post_permalink  = get_permalink();
+
+                                printf( '<li class="google-share"><a href="https://plus.google.com/share?url=%s" target="_blank" class="et-share-button et-share-google">%s</a></li>',
+                                    esc_url( $post_permalink ),
+                                    esc_html__( 'Google', 'Nexus' )
+                                );
+
+                                printf( '<li class="facebook-share"><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=%1$s&amp;p[images][0]=%2$s&amp;p[title]=%3$s" target="_blank" class="et-share-button et-share-facebook">%4$s</a></li>',
+                                    esc_url( $post_permalink ),
+                                    esc_attr( $thumbnail[0] ),
+                                    $title_attribute,
+                                    esc_html__( 'Facebook', 'Nexus' )
+                                );
+
+                                printf( '<li class="twitter-share"><a href="https://twitter.com/intent/tweet?url=%1$s&amp;text=%2$s" target="_blank" class="et-share-button et-share-twitter">%3$s</a></li>',
+                                    esc_url( $post_permalink ),
+                                    $title_attribute,
+                                    esc_html__( 'Twitter', 'Nexus' )
+                                );
+                                ?>
+                                <li class="whatsapp-share">
+                                    <a class="whatsapp" href="whatsapp://send?text=<?php the_title(); ?> – <?php urlencode(the_permalink()); ?>" data-action="share/whatsapp/share">WhatsApp</a>
+                                </li>
+                            </ul>
+                        </div>
+
 					</div>
 
 <div

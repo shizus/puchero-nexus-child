@@ -342,3 +342,16 @@ a.et-share-button.et-share-facebook {
 a.et-share-button.et-share-twitter {
     background: rgba(0, 0, 0, 0) url("http://www.pucheronews.com/wp-content/uploads/2015/08/round-twitter-logo.png") no-repeat scroll 0 0;
 }
+
+/* Social buttons floating bar */
+
+#tomate-post-share {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    padding: 5px;
+    color: #000000;
+    z-index: 10;
+}
