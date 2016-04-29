@@ -70,7 +70,9 @@ body.single #left-area, body.page #left-area {
 
 .recent-post p.post-meta {
     color: #545454;
+    overflow: hidden;
 }
+
 .post-meta > span {
     color: #ffffff;
     font-weight: 600;
@@ -82,6 +84,10 @@ body.single #left-area, body.page #left-area {
     font-weight: 600;
 }
 
+p.post-meta {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 /*INSTAGRAM*/
 
 .pllexislider .pllex-direction-nav .pllex-next:before,
@@ -123,6 +129,12 @@ div.today {
 }
 
 /* Posts */
+
+h2 {
+    font-size: 24px;
+    color: gray;
+}
+
 
 .single-post div.panel-grid div.so-panel {
   padding: 5px 0px;
@@ -180,6 +192,13 @@ div#et-box-author p {
   font-weight: 500;
 }
 
+#close-subscribe-btn {
+    position: absolute;
+    right: 5;
+    top: 5;
+    float: right;
+}
+
 .whatsapp-share a {
     background-image: url(http://www.pucheronews.com/wp-content/themes/puchero-nexus-child/images/icon_whatsapp.png);
 }
@@ -188,9 +207,34 @@ div#et-box-author p {
     display: none;
 }
 
+/* search bar */
+
+div#search-header-widget {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+div#search-header-widget #isp_search_box_widget-2 {
+    padding: 0;
+    margin: 0 1em;
+    float: right;
+}
+
 @media only screen and (max-width:70em) {
     #et-share-icons li.whatsapp-share {
         display: inline-block;
+    }
+    #top-header-widget {
+        margin-top: 0;
+    }
+
+    #lfo_todays_date_widget-2 {
+        display: none;
+    }
+
+    .back-to-top {
+        display: none;
     }
 }
 
@@ -220,7 +264,9 @@ div#et-box-author p {
 }
 
 .fb-like.fb_iframe_widget {
-    margin: 25px;
+    display: none;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 #mc_embed_signup .button {
@@ -248,6 +294,7 @@ div#et-box-author p {
 
 #footer-info div#licence-text {
     text-align: right;
+    display: none;
 }
 
 /* Suscribe sticky */
@@ -255,7 +302,6 @@ div#et-box-author p {
     background: none repeat scroll 0 0 #ff9000;
     bottom: 0;
     color: #ffffff;
-    display: none;
     height: 130px;
     margin: 0;
     position: fixed;
@@ -306,7 +352,13 @@ div#et-box-author p {
     display: none;
 }
 
-@media only screen and (max-width: 1279px) and (min-width: 961px) {
+@media only screen and (max-width: 1279px) {
+    .home #content {
+        width: 100%;
+    }
+}
+
+    @media only screen and (max-width: 1279px) and (min-width: 961px) {
 	#additional-sidebar .widget {
 	    float: left;
 	    width: 20%;
@@ -317,9 +369,7 @@ div#et-box-author p {
 	    width: 100%;
 	    display: block !important;
 	}
-	.home #content {
-	  width: 100%;
-	}
+
 }
 @media only screen and (max-width: 1300px) and (min-width: 1279px){
 	.home #additional-sidebar {

@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+require_once("tomate-ninja-functions.php");
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
@@ -12,7 +14,16 @@ register_sidebar(array(
 	'after_widget' => '</div>',
 ));
 
+register_sidebar(array(
+    'name'=> 'Search Sidebar',
+    'id' => 'search_sidebar',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+));
+
 // agrego pre-built layout
+
+
 
 function mytheme_prebuilt_layouts($layouts){
     $layouts['home-page'] = array (// We'll add a title field

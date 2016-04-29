@@ -151,15 +151,15 @@ msgstr ""
 
 #: ../functions.php:207 ../page-blog.php:59
 msgid "Posted"
-msgstr ""
+msgstr "Escrito"
 
 #: ../functions.php:210
 msgid "By"
-msgstr ""
+msgstr "Por"
 
 #: ../functions.php:216 ../page-blog.php:59
 msgid "in"
-msgstr ""
+msgstr "en"
 
 #: ../functions.php:226
 msgid "ET Settings"

@@ -23,9 +23,7 @@
 		<div id="licence-img">
 		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
 		</div>
-		<div id="licence-text">
-		<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Puchero News</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="pucheronews.com" property="cc:attributionName" rel="cc:attributionURL">pucheronews.com</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
-		</div>
+    </div>
 	</div>
 <a class="back-to-top" href="#">
 	<!-- Begin MailChimp Signup Form -->
@@ -37,9 +35,9 @@
 	</style>
 	<div id="mc_embed_signup">
 	<form action="//pucheronews.us11.list-manage.com/subscribe/post?u=5f46ae4a11eff39ab08c4ddfd&amp;id=cd8a31b1e3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	    <div id="mc_embed_signup_scroll">
+	   <div id="mc_embed_signup_scroll">
 		<label for="mce-EMAIL">¡Suscribite a nuestra lista!</label>
-		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Tu e-mail" required>
+           <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Tu e-mail" required>
 	    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_5f46ae4a11eff39ab08c4ddfd_cd8a31b1e3" tabindex="-1" value=""></div>
 	    <div class="clear"><input type="submit" value="¡Suscribirme!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
@@ -49,6 +47,52 @@
 
 	<!--End mc_embed_signup-->
 </a>
+        
+        <script type="text/javascript">
+            var hideSubscribe = function () {
+                jQuery(".back-to-top").hide();
+            };
+
+            var hideWhatsappLink = function () {
+                var standalone = window.navigator.standalone,
+                    userAgent = window.navigator.userAgent.toLowerCase(),
+                    safari = /safari/.test( userAgent ),
+                    ios = /iphone|ipod|ipad/.test( userAgent );
+
+                if( ios ) {
+
+                    if ( !standalone && safari ) {
+
+                        //document.getElementById( 'where-am-i' ).textContent = 'browser';
+
+                    } else if ( standalone && !safari ) {
+
+                        //document.getElementById( 'where-am-i' ).textContent = 'standalone';
+
+                    } else if ( !standalone && !safari ) {
+
+                        jQuery(".whatsapp-share").hide();
+
+                    }
+
+                } else {
+
+                    //document.getElementById( 'where-am-i' ).textContent = 'not iOS';
+                    var ua = navigator.userAgent.toLowerCase();
+                    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+                    if(isAndroid) {
+                        // Do something!
+                        // Redirect to Android-site?
+                        jQuery(".whatsapp-share").hide();
+                    }
+
+                }
+            };
+            jQuery( document ).ready(function() {
+                setTimeout(hideSubscribe, 15000);
+                hideWhatsappLink();
+            });
+        </script>
 
 	<?php wp_footer(); ?>
 </body>

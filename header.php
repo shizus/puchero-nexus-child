@@ -97,10 +97,14 @@
                 <?php endif; ?>
 			</div>
 
-
+            <?php
+            if ( is_active_sidebar( 'search_sidebar' ) ) : ?>
+                    <div id="search-header-widget">
+                        <?php dynamic_sidebar( 'search_sidebar' ); ?>
+                    </div><!-- end #sidebar -->
+            <?php endif; ?>
 			<div id="top-navigation" class="clearfix">
 				<?php do_action( 'et_header_top' ); ?>
-
 				<nav>
 				<?php
 					$menuClass = 'nav';
@@ -127,6 +131,7 @@
 				</nav>
 
 				<ul id="et-social-icons">
+
 					<?php if ( 'on' === et_get_option( 'nexus_show_twitter_icon', 'on' ) ) : ?>
 					<li class="twitter">
 						<a target="_blank" href="<?php echo esc_url( et_get_option( 'nexus_twitter_url', '#' ) ); ?>">
@@ -166,6 +171,7 @@
 					</li>
 					<?php endif; ?>
 				</ul>
+
 			</div> <!-- #top-navigation -->
 		</div> <!-- .container -->
 	</header> <!-- #main-header -->

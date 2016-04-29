@@ -64,6 +64,8 @@ if ( '' != get_the_post_thumbnail() ) :
 
 
                             <?php
+
+                            the_date('d.m.Y', '<h2>', '</h2>');
                             the_content();
 
                             wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Nexus' ), 'after' => '</div>' ) );
@@ -152,10 +154,9 @@ if ( '' != get_the_post_thumbnail() ) :
                                         esc_html__( 'Twitter', 'Nexus' )
                                     );
                                     ?>
-
-<li class="whatsapp-share">
-                                    <a class="whatsapp" href="whatsapp://send?text=<?php the_title(); ?> – <?php urlencode(the_permalink()); ?>" data-action="share/whatsapp/share">WhatsApp</a>
-                                </li>
+                                    <li class="whatsapp-share">
+                                        <a class="whatsapp" href="whatsapp://send?text=<?php rawurlencode(get_the_title() . " - " . the_permalink()); ?>" data-action="share/whatsapp/share">WhatsApp</a>
+                                    </li>
 
                                 </ul>
                             </div>

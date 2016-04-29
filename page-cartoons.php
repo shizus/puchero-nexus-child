@@ -119,9 +119,8 @@ if ( '' != get_the_post_thumbnail() ) :
                                     esc_html__( 'Twitter', 'Nexus' )
                                 );
                                 ?>
-
-<li class="whatsapp-share">
-                                    <a class="whatsapp" href="whatsapp://send?text=<?php the_title(); ?> – <?php urlencode(the_permalink()); ?>" data-action="share/whatsapp/share">WhatsApp</a>
+                                <li class="whatsapp-share">
+                                    <a class="whatsapp" href="whatsapp://send?text=<?php rawurlencode(get_the_title() . " - " . the_permalink()); ?>" data-action="share/whatsapp/share">WhatsApp</a>
                                 </li>
                             </ul>
                         </div>
