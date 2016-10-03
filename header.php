@@ -12,6 +12,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+    <script src="//load.sumome.com/" data-sumo-site-id="118353224dd76d7c794a5ef556ed8874a4a3d13fe7a10fd0cd3e8e3fd679b4dd" async="async"></script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php elegant_titles(); ?></title>
 	<?php elegant_description(); ?>

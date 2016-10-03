@@ -55,6 +55,8 @@ if ( '' != get_the_post_thumbnail() ) :
 
 					<?php
                         the_date('d.m.Y', '<h2>', '</h2>');
+                        $author_link = get_the_author_link();
+                    ?>Por <?php echo $author_link;
 						the_content();
 
 						wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Nexus' ), 'after' => '</div>' ) );
@@ -69,7 +71,7 @@ if ( '' != get_the_post_thumbnail() ) :
 								<?php echo get_avatar( get_the_author_meta( 'ID' )); ?>
 							</div> <!-- end #author-avatar -->
                             <?php
-                            $author_link = get_the_author_link();
+                            //$author_link = get_the_author_link();
                             //inserto target=_blank en el link
 				if (strpos($author_link,'<a') !== false){
                             $author_link = substr_replace($author_link, " target='_blank' ", 2, 0);
