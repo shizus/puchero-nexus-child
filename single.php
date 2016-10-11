@@ -55,8 +55,14 @@ if ( '' != get_the_post_thumbnail() ) :
 
 					<?php
                         the_date('d.m.Y', '<h2>', '</h2>');
+                        $post_date = get_the_date('d.m.Y');
+                    echo "<!-- ";
+                    var_dump($post_date);
+                    echo "-->";
+                    if(strtotime("08.09.2016") < strtotime($post_date)) {
                         $author_link = get_the_author_link();
-                    ?>Por <?php echo $author_link;
+                        ?>Por <?php echo $author_link;
+                    }
 						the_content();
 
 						wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'Nexus' ), 'after' => '</div>' ) );
