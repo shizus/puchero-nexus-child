@@ -420,3 +420,52 @@ a.et-share-button.et-share-twitter {
     margin: 5px;
     display: inline-block;
 }
+
+/*De monitor a ipad*/
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1600px)  { 
+
+    #top-menu a {
+        padding: 26px 10px;
+    }
+    
+}
+
+
+/*iPad in portrait & landscape*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+
+
+/*iPad only in landscape*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+/*iPad only in portrait*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
+
+
+/*iPhone 6 in portrait & landscape*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { /* STYLES GO HERE */}
+
+/*iPhone 6 in landscape*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) { /* STYLES GO HERE */}
+
+
+/*iPhone 6 in portrait*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) { /* STYLES GO HERE */ }
