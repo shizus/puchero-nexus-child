@@ -96,42 +96,19 @@
                         ?>
                     </div> <!-- .header-banner -->
                 <?php endif; ?>
+
 			</div>
+
+
 
             <?php
             if ( is_active_sidebar( 'search_sidebar' ) ) : ?>
+
                     <div id="search-header-widget">
+
                         <?php dynamic_sidebar( 'search_sidebar' ); ?>
-                    </div><!-- end #sidebar -->
-            <?php endif; ?>
-			<div id="top-navigation" class="clearfix">
-				<?php do_action( 'et_header_top' ); ?>
-				<nav>
-				<?php
-					$menuClass = 'nav';
-					if ( 'on' == et_get_option( 'nexus_disable_toptier' ) ) $menuClass .= ' et_disable_top_tier';
-					$primaryNav = '';
 
-					$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );
-
-					if ( '' == $primaryNav ) :
-				?>
-					<ul id="top-menu" class="<?php echo esc_attr( $menuClass ); ?>">
-						<?php if ( 'on' == et_get_option( 'nexus_home_link' ) ) { ?>
-							<li <?php if ( is_home() ) echo( 'class="current_page_item"' ); ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home','Nexus' ); ?></a></li>
-						<?php }; ?>
-
-						<?php show_page_menu( $menuClass, false, false ); ?>
-						<?php show_categories_menu( $menuClass, false ); ?>
-					</ul>
-				<?php
-					else :
-						echo( $primaryNav );
-					endif;
-				?>
-				</nav>
-
-				<ul id="et-social-icons">
+                    <ul id="et-social-icons">
 
 					<?php if ( 'on' === et_get_option( 'nexus_show_twitter_icon', 'on' ) ) : ?>
 					<li class="twitter">
@@ -172,6 +149,46 @@
 					</li>
 					<?php endif; ?>
 				</ul>
+
+
+
+                    </div><!-- end #sidebar -->
+
+
+
+            <?php endif; ?>
+
+
+
+
+			<div id="top-navigation" class="clearfix">
+				<?php do_action( 'et_header_top' ); ?>
+				<nav>
+				<?php
+					$menuClass = 'nav';
+					if ( 'on' == et_get_option( 'nexus_disable_toptier' ) ) $menuClass .= ' et_disable_top_tier';
+					$primaryNav = '';
+
+					$primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );
+
+					if ( '' == $primaryNav ) :
+				?>
+					<ul id="top-menu" class="<?php echo esc_attr( $menuClass ); ?>">
+						<?php if ( 'on' == et_get_option( 'nexus_home_link' ) ) { ?>
+							<li <?php if ( is_home() ) echo( 'class="current_page_item"' ); ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home','Nexus' ); ?></a></li>
+						<?php }; ?>
+
+						<?php show_page_menu( $menuClass, false, false ); ?>
+						<?php show_categories_menu( $menuClass, false ); ?>
+					</ul>
+				<?php
+					else :
+						echo( $primaryNav );
+					endif;
+				?>
+				</nav>
+
+				
 
 			</div> <!-- #top-navigation -->
 		</div> <!-- .container -->
