@@ -25,6 +25,6 @@
 			);
 		?>
 		</p>
-		<p><?php et_nexus_truncate_post( 177 ); ?></p>
+		<p><?php echo get_excerpt(230);//et_nexus_truncate_post( 177 ); ?></p>
 	</div>
 </div>
